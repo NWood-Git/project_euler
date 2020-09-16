@@ -22,15 +22,15 @@ def largest_prime_factor(target):
 
 
 # print(largest_prime_factor(13195))
-print(largest_prime_factor(600851475143))
+print(largest_prime_factor(600851475143)) # Answer = 6857
+
+###############################################################################
 
 # import time
 # start = time.time()
 # print(largest_prime_factor(600851475143))
 # end = time.time()
 # print(end-start)
-
-
 
 '''
 def prime_nums_less_than(num):

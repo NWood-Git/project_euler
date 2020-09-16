@@ -22,4 +22,4 @@ def sum_of_even_fib(limit):
             result += next_num 
     return result
 
-print(sum_of_even_fib(4000000))
+print(sum_of_even_fib(4000000)) # Answer = 4613732

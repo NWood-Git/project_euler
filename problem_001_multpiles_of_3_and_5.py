@@ -19,6 +19,7 @@ print(multiples(1000))
 # Better Solution
 
 def sum_divisible_by(n, target):
+    '''Gauss Addition Trick'''
     p = target // n
     return n * (p*(p+1)) / 2
 
@@ -28,4 +29,4 @@ def multiples_of_two_num(num1, num2, target):
     product_of_nums_sum = sum_divisible_by(num1*num2, target)
     return num1_sum + num2_sum - product_of_nums_sum
 
-print(multiples_of_two_num(3,5,1000))
+print(multiples_of_two_num(3,5,1000)) # Answer = 233168
