@@ -38,9 +38,8 @@ def palindrome_product_in_range(num1, num2):
 print(palindrome_product_in_range(10,99))
 print(palindrome_product_in_range(100,999))
 
-## Answer = 96609
-
 # Congratulations, the answer you gave to problem 4 is correct.
 # You are the 485880th person to have solved this problem.
 # This problem had a difficulty rating of 5%. The highest difficulty rating you 
 # have solved remains at 5%.
+## Answer = 96609

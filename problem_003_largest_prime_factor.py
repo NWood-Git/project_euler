@@ -20,17 +20,55 @@ def largest_prime_factor(target):
                 prime_list.append(i)
     return prime_list[-1]
 
-
 # print(largest_prime_factor(13195))
-print(largest_prime_factor(600851475143)) # Answer = 6857
+# print(largest_prime_factor(600851475143)) # Answer = 6857
 
-###############################################################################
+import time
+start = time.time()
+print(largest_prime_factor(600851475143))
+end = time.time()
+print(end-start)
 
-# import time
-# start = time.time()
-# print(largest_prime_factor(600851475143))
-# end = time.time()
-# print(end-start)
+# More Optimized Solutions
+
+# with prime list
+def largest_prime_factor_opt_with_list(target):
+    prime_list = []
+    if target % 2 == 0:
+        prime_list.append(2)
+        while target % 2 == 0 and target != 2:
+            target /= 2
+    factor = 3
+    while target > factor:
+        if target % factor == 0:
+            prime_list.append(factor)
+            while target % factor == 0 and target != factor:
+                target /= factor
+        factor += 2
+    prime_list.append(int(target))
+    return (prime_list, target)
+
+# print(largest_prime_factor_opt_with_list(600851475143))
+
+# p without prime list
+def largest_prime_factor_opt_without_list(target):
+    if target % 2 == 0:
+        while target % 2 == 0 and target != 2:
+            target /= 2
+    factor = 3
+    while target > factor:
+        if target % factor == 0:
+            while target % factor == 0 and target != factor:
+                target /= factor
+        factor += 2
+    return target
+
+
+import time
+start = time.time()
+print(largest_prime_factor_opt_without_list(600851475143))
+end = time.time()
+print(end-start)
 
 '''
 def prime_nums_less_than(num):
