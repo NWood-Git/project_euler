@@ -51,7 +51,6 @@ def smallest_multiple(multiple, start, end):
 def prime_factor_list(target):
     prime_list = []
     if target % 2 == 0:
-        # prime_list.append(2)
         while target % 2 == 0 and target != 1:
             target /= 2
             prime_list.append(2)
@@ -65,7 +64,7 @@ def prime_factor_list(target):
     if target != 1: prime_list.append(int(target))
     return (prime_list)
 
-
+# Note: end is inclusive 
 def smallest_multiple_better(start, end):
     high_level_prime_factor_list = []
 
